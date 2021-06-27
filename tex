@@ -1,4 +1,3 @@
 #!/bin/env fish
 cd (dirname (status --current-filename))
-watchexec -w . -e tex -- lualatex *.tex
-#watchexec -w . -e tex -- lualatex --interaction=batchmode *.tex
+watchexec -w . -e tex -- lualatex --interaction=batchmode *.tex

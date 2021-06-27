@@ -1,20 +1,27 @@
+% Monday 18-
 \documentclass{beamer}
 \usepackage{luatextra}
 \defaultfontfeatures{Ligatures=TeX,Numbers=OldStyle}
 \usepackage{unicode-math}
 \setmathfont{Latin Modern Math}
 \setbeamertemplate{navigation symbols}{}
-\title{Reaction Kinetics (nekRK)}
 \author{Matthias Fauconneau}
 \institute{ETH}
-\date{December 12, 2020}
 \begin{document}
-\frame{\titlepage}
 
 \begin{frame}{Fast kinetic rate and transport properties evaluation}
 \begin{itemize}
-\item Validated against Cantera \\
-\item CUDA\\
+\item Initial prototype derived from Fuego (C code generator)
+\item Adapted to generate OCCA/CUDA code
+\item Added code generation for transport properties :
+\begin{itemize}
+\item Thermal conductivity
+\item Viscosity
+\item Mixture diffusion coefficients
+\end{itemize}
+\item Validated against Cantera
+\item OCCA bug limits us to small mechanisms (9 species)
 \end{itemize}
 
 \end{frame}
+\end{document}
